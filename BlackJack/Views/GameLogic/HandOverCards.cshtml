@@ -13,7 +13,7 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name):
-                @foreach (var i in item.PlayingCards)
+                @foreach (var i in item.CardsViewModelList)
                 {
                 <td>
                     @Html.DisplayFor(modelItem => i.CardValue)

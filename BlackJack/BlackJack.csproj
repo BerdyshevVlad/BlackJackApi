@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -151,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DIContainer\AutofacConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -290,6 +297,10 @@
     <ProjectReference Include="..\BlackJack.DAL\BlackJack.DAL.csproj">
       <Project>{2c833819-f410-41ac-9d5a-98e099242a80}</Project>
       <Name>BlackJack.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlackJack.DI\BlackJack.DI.csproj">
+      <Project>{743BC523-AB6A-461B-A711-DFED7BB4C75D}</Project>
+      <Name>BlackJack.DI</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlackJack.VML\BlackJack.VML.csproj">
       <Project>{07968782-c165-4ef8-91be-fbd3e4d6dd21}</Project>

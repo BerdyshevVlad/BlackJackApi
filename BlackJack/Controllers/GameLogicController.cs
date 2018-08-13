@@ -1,4 +1,6 @@
-﻿using BlackJack.BLL.Services;
+﻿using BlackJack.BLL.Interfaces;
+using BlackJack.BLL.Services;
+using BlackJack.DAL.Entities;
 using BlackJack.VML;
 using System;
 using System.Collections.Generic;
@@ -12,18 +14,21 @@ namespace BlackJack.Controllers
     public class GameLogicController : Controller
     {
         GameLogicService _gameLogic;
+        IRepository<Card> _cardRepository;
         public GameLogicController()
         {
+            //_gameLogic = new GameLogicService(_cardRepository);
             _gameLogic = new GameLogicService();
         }
 
 
         [HttpGet]
-        public async Task<JsonResult> HandOverCards()
+        //public async Task<JsonResult> HandOverCards()
+        public async Task<ActionResult> HandOverCards()
         {
             List<PlayerViewModel> playersModel = await _gameLogic.HandOverCards();
-            //return View(playersModel);
-            return Json(playersModel, JsonRequestBehavior.AllowGet);
+            return View(playersModel);
+            //return Json(playersModel, JsonRequestBehavior.AllowGet);
         }
 
 

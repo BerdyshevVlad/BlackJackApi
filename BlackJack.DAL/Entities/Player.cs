@@ -17,10 +17,12 @@ namespace BlackJack.DAL.Entities
         public string Status { get; set; }
         public string PlayerType { get; set; }
         public virtual ICollection<Card> CardsList { get; set; }
+        public virtual ICollection<Round> RoundsList { get; set; }
 
         public Player()
         {
             CardsList = new HashSet<Card>();
+            RoundsList = new HashSet<Round>();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack.DI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,9 @@ namespace BlackJack
     {
         protected void Application_Start()
         {
+
+            AutofacConfig.ConfigureContainer();
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

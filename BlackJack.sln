@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack.BLL", "BlackJack.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionLogger", "ExceptionLogger\ExceptionLogger.csproj", "{CC7B274C-759C-43E3-894F-FBAB91387FB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack.DI", "BlackJack.DI\BlackJack.DI.csproj", "{743BC523-AB6A-461B-A711-DFED7BB4C75D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{CC7B274C-759C-43E3-894F-FBAB91387FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7B274C-759C-43E3-894F-FBAB91387FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC7B274C-759C-43E3-894F-FBAB91387FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743BC523-AB6A-461B-A711-DFED7BB4C75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743BC523-AB6A-461B-A711-DFED7BB4C75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743BC523-AB6A-461B-A711-DFED7BB4C75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743BC523-AB6A-461B-A711-DFED7BB4C75D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

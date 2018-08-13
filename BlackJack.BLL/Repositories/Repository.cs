@@ -81,9 +81,9 @@ namespace BlackJack.BLL.Repositories
         }
 
 
-        public async Task Insert(TEntity playingCard)
+        public async Task Insert(TEntity item)
         {
-            _dbSet.Add(playingCard);
+            _dbSet.Add(item);
             Thread.Sleep(200);
             await _blackJackContex.SaveChangesAsync();
         }
