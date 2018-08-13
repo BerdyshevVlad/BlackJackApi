@@ -1,0 +1,21 @@
+﻿@model IEnumerable<BlackJack.VML.CardViewModel>
+
+@{
+    ViewBag.Title = "SetDeck";
+}
+
+<h2>SetDeck</h2>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id):                    @Html.DisplayFor(modelItem => item.CardValue)
+            </td>
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BlackJack.VML.PlayerViewModel>
+
+@{
+    ViewBag.Title = "HandOverCards";
+}
+
+<h2>HandOverCards</h2>
+
+<table class="table" id="result">
+    <h1>Cards:</h1>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name):
+                @foreach (var i in item.PlayingCards)
+                {
+                <td>
+                    @Html.DisplayFor(modelItem => i.CardValue)
+                </td>
+            }
+                </td>
+            </tr>
+        }
+</table>
+@using (Ajax.BeginForm("PlayAgain", new AjaxOptions { UpdateTargetId = "result" }))
+{
+    <input type="text" name="yesOrNo" />
+    <input type="submit" value="Поиск" />
+}
+
+
+<table class="table">
+    <h1>Total scors:</h1>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name):                    @Html.DisplayFor(modelItem => item.Score)
+            </td>
+        </tr>
+    }
+</table>
+

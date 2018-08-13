@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack", "BlackJack\BlackJack.csproj", "{1BE5EF7B-049E-401C-8858-6D19297FC328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack.DAL", "BlackJack.DAL\BlackJack.DAL.csproj", "{2C833819-F410-41AC-9D5A-98E099242A80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack.VML", "BlackJack.VML\BlackJack.VML.csproj", "{07968782-C165-4EF8-91BE-FBD3E4D6DD21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mappers", "Mappers\Mappers.csproj", "{8ED706BE-66C8-44F9-A1D7-DB73A995F2A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack.BLL", "BlackJack.BLL\BlackJack.BLL.csproj", "{DC0BC199-F9D8-4855-8326-6167F4247C28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionLogger", "ExceptionLogger\ExceptionLogger.csproj", "{CC7B274C-759C-43E3-894F-FBAB91387FB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BE5EF7B-049E-401C-8858-6D19297FC328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE5EF7B-049E-401C-8858-6D19297FC328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE5EF7B-049E-401C-8858-6D19297FC328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE5EF7B-049E-401C-8858-6D19297FC328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C833819-F410-41AC-9D5A-98E099242A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C833819-F410-41AC-9D5A-98E099242A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C833819-F410-41AC-9D5A-98E099242A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C833819-F410-41AC-9D5A-98E099242A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07968782-C165-4EF8-91BE-FBD3E4D6DD21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07968782-C165-4EF8-91BE-FBD3E4D6DD21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07968782-C165-4EF8-91BE-FBD3E4D6DD21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07968782-C165-4EF8-91BE-FBD3E4D6DD21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED706BE-66C8-44F9-A1D7-DB73A995F2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED706BE-66C8-44F9-A1D7-DB73A995F2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED706BE-66C8-44F9-A1D7-DB73A995F2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED706BE-66C8-44F9-A1D7-DB73A995F2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0BC199-F9D8-4855-8326-6167F4247C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0BC199-F9D8-4855-8326-6167F4247C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0BC199-F9D8-4855-8326-6167F4247C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0BC199-F9D8-4855-8326-6167F4247C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7B274C-759C-43E3-894F-FBAB91387FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7B274C-759C-43E3-894F-FBAB91387FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7B274C-759C-43E3-894F-FBAB91387FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7B274C-759C-43E3-894F-FBAB91387FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C9748BD-B966-4A8C-80AE-85DE3C0642EC}
+	EndGlobalSection
+EndGlobal

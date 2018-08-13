@@ -1,0 +1,21 @@
+﻿@model IEnumerable<BlackJack.VML.PlayerViewModel>
+
+@{
+    ViewBag.Title = "ShowPlayers";
+}
+
+<h2>ShowPlayers</h2>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        </tr>
+    }
+
+</table>
+
