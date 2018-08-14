@@ -16,7 +16,7 @@ namespace BlackJack.BLL.Services
     {
         //Repository<Card> _cardRepository;
         Repository<Player> _playerRepository;
-
+        Repository<Round> _roundRepository;
         IRepository<Card> _cardRepository;
 
 
@@ -26,6 +26,7 @@ namespace BlackJack.BLL.Services
             //_cardRepository = cardRepository;
             _cardRepository= new Repository<Card>(new DAL.BlackJackContext());
             _playerRepository = new Repository<Player>(new DAL.BlackJackContext());
+            _roundRepository=new Repository<Round>(new DAL.BlackJackContext());
         }
 
 
@@ -168,77 +169,7 @@ namespace BlackJack.BLL.Services
 
         public async Task<List<PlayerViewModel>> Winner()
         {
-            Repository < Round > repo= new Repository<Round>(new DAL.BlackJackContext());
-            Round round = new Round();
             var playerList = await _playerRepository.Get();
-            foreach (var player in playerList)
-            {
-                round.PlayersList.Add(player);
-            }
-
-            foreach (var p in round.PlayersList)
-            {
-                foreach (var card in p.CardsList)
-                {
-                    var t = card;
-                    var tt = card;
-                }
-            }
-
-            await repo.Insert(round);
-
-            var qqq =await repo.Get();
-
-            //
-
-
-            //testSTART
-            //Repository<Round> repo = new Repository<Round>(new DAL.BlackJackContext());
-
-            //Round round = new Round();
-            //var playerList = await _playerRepository.Get();
-            //foreach (var player in playerList)
-            //{
-            //    //Player p = await _playerRepository.GetById(player.Id);
-            //    round.PlayersList.Add(player);
-            //    //await repo.Save();
-            //}
-
-            ////foreach (var p in round.PlayersList)
-            ////{
-            ////    foreach (var card in p.CardsList)
-            ////    {
-            ////        var t = card;
-            ////        var tt = card;
-            ////    }
-            ////}
-
-            //await repo.Insert(round);
-
-            //var r = await repo.Get();
-
-            //Repository<Game> gamerepo = new Repository<Game>(new DAL.BlackJackContext());
-            //Game game = new Game();
-            //game.RoundsList.Add(round);
-
-            //foreach (var item in await repo.Get())
-            //{
-            //    game.RoundsList.Add(item);
-            //}
-
-            //var u = 0;
-
-            //await gamerepo.Insert(game);
-
-            //var t = await gamerepo.Get();
-            //testEND
-
-
-
-            //
-
-
-
             var max = playerList.Where(x => x.Score <= 21).Max(x => x.Score);
             foreach (var item in playerList)
             {
@@ -252,6 +183,36 @@ namespace BlackJack.BLL.Services
             var tmp = playerList.Where(x => x.Score == max).ToList();
             List<PlayerViewModel> playerModel = Mapp.MappPlayer(tmp);
             return playerModel;
+        }
+
+
+        public async Task<List<PlayerViewModel>> RoundHistory()
+        {
+            Round round = new Round();
+            var playerList = await _playerRepository.Get();
+            foreach (var player in playerList)
+            {
+                round.PlayersList.Add(player);
+            }
+
+            foreach (var p in round.PlayersList)
+            {
+                foreach (var card in p.CardsList)
+                {
+                    var t = card;
+                }
+            }
+
+            await _roundRepository.Insert(round);
+            List<Round> roundsList = await _roundRepository.Get() as List<Round>;
+            List<PlayerViewModel> playersModelList=null;
+
+            foreach (var roundItem in roundsList)
+            {
+                playersModelList = Mapp.MappPlayer(roundItem.PlayersList.ToList());
+            }
+
+            return playersModelList;
         }
     }
 }

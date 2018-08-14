@@ -255,6 +255,7 @@
     <Content Include="Views\GameLogic\HandOverCards.cshtml" />
     <Content Include="Views\GameLogic\PlayAgain.cshtml" />
     <Content Include="Views\GameLogic\Winner.cshtml" />
+    <Content Include="Views\GameLogic\RoundHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
